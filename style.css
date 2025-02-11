@@ -283,7 +283,7 @@ section {
 	padding-left: 23px;
 	padding-right: 23px;
 }
-.main-reviews__block_reviews {
+.slider__block_reviews {
 	background-color: #F9FAFB;
 	border-radius: 16px;
 	min-height: 350px;
@@ -294,7 +294,13 @@ section {
 	width: 50%;
 	min-width: calc(50% - 12px);
 }
-.main-reviews__block_reviews-title {
+.slider__show-left {
+	transform: translate(638px, 0px)
+}
+.slider__show-right {
+
+}
+.slider__block_reviews-title {
 	font-size: 24px;
 	line-height: 32px;
 	font-weight: 700;
@@ -306,16 +312,16 @@ section {
 	grid-template-columns: 60px 1fr 60px;
 	gap: 35px;
 }
-.main-reviews__block {
+.slider__block {
 	display: flex;
 	justify-content: space-between;
 	gap: 24px;
 	overflow: auto;
 }
-.main-reviews__block_arrow {
+.slider__block_arrow {
 	margin-top: 111px;
 }
-.main-reviews__block_reviews-subtitle {
+.slider__block_reviews-subtitle {
 	font-size: 24px;
 	line-height: 32px;
 	margin-top: auto;

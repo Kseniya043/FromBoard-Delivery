@@ -41,6 +41,29 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 })
+1. выбираю кнопки( 2)
+2. выбираю родителя к которому будет добавляться/убирать класс - он 1, класс, который добавляется в моем случае 2 должно быть, чтобы влево и вправо двигалось
+3. определяю, когда нажали на кнопку
+4. Добавляем класс, если его нет, а если есть, то убираем? в 1 сторону только понимаю как, туда обратно
+let buttonLeftSlider = document.getElementById('slider_btn-left') - выбираю кнопку влево
+let buttonRightSlider = document.getElementById('slider_btn-right') - выбираю кнопку вправо
+let elementSlider = document.querySelector('.slider__block_reviews'); - выбираю родителя
+buttonLeftSlider.onclick = function () { определяю, когда нажали на кнопку влево
+    if (elementSlider.classList.contains("slider__show-left")) {
+        elementSlider.classList.remove("slider__show-left");
+    } else {
+        elementSlider.classList.add("slider__show-left")
+    }
+}
+})
+еще 1 див в котором все слайды
+
+1. Узнаем ширину 1 слайда и записываем в переменную
+2. определяю когда нажали на кнопку и на какую в зависимости от кнопки определяю движение слайда ( отрицательное либо положительное значение)
+3. при каждом клике определяю текущее значение свойства transforme
+4. к текущему значению прибавляю или вычитаю ширину слайда, которое хранится в переменной
+
+свойство transforme translate нужно выставлять в inline стиле
 
 
 
