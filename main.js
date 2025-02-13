@@ -32,26 +32,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let button = document.getElementById('show-more-documents')
     let elementWithClassBlock = document.querySelector('.main-documents__block');
-	    button.onclick = function () {
+    button.onclick = function () {
         if (elementWithClassBlock.classList.contains("main-documents__block_child")) {
-      	elementWithClassBlock.classList.remove("main-documents__block_child");
+            elementWithClassBlock.classList.remove("main-documents__block_child");
         } else {
             elementWithClassBlock.classList.add("main-documents__block_child")
         }
     }
 
-	let buttonLeftSlider = document.getElementById('slider_btn-left')
-	let buttonRightSlider = document.getElementById('slider_btn-right')
-	let elementSlider = document.querySelector('.slider__block');
-	
-	let wightSlider = document.querySelector('.slider__block_reviews').clientWidth
+    const buttonLeftSlide = document.getElementById('slider_btn-left')
+    const buttonRightSlide = document.getElementById('slider_btn-right')
+    const elementSlide = document.querySelector('.slider__block');
 
-	buttonLeftSlider.onclick = 10000 - wightSlider;
-
-	console.log(buttonLeftSlider.onclick)
-	
+    const firstSlideElement = document.querySelector('.slider__block_reviews');
+    const widthSlide = firstSlideElement?.clientWidth
+    function getTranslateX(firstSlideElement) {
+        const style = window.getComputedStyle(firstSlideElement);
+        const transform = style.transform;
+        if (!transform || transform === 'none') {
+            return 0;
+        }
+        const match = transform.match(/matrix\([^,]+,[^,]+,[^,]+,[^,]+,\s*([^,]+),\s*([^,]+)\)/);
+        return match ? parseFloat(match[2]) : 0;
+    }
+    getTranslateX(document.getElementById('firstSlideElement'))
 })
 
-wightSlider.style.transform = "translateX()";
+
+
 
 
