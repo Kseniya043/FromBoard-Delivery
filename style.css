@@ -310,13 +310,14 @@ section {
 .main-reviews__info {
 	display: grid;
 	grid-template-columns: 60px 1fr 60px;
-	gap: 35px;
+	gap: 47px;
+}
+.slider {	
+	overflow: auto;
 }
 .slider__block {
 	display: flex;
-	justify-content: space-between;
 	gap: 24px;
-	overflow: auto;
 }
 .slider__block_arrow {
 	margin-top: 111px;
